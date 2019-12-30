@@ -11,7 +11,7 @@ collections:
     folder: content/blog
     create: true
     fields:
-      - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: description, label: Description }
+      - { name: date, label: Date, widget: date }
       - { name: body, label: Body, widget: markdown }
