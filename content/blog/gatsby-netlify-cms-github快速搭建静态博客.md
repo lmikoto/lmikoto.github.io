@@ -75,4 +75,4 @@ github上新建一个auth app <https://github.com/settings/developers>
 - 评论系统
 - 适合自己的布局  
 
-但是因为博客是Gatsby，有着比较丰富的生态，已经高度的可定制性，作出这些只是时间上的问题。
+但是因为博客是Gatsby，有着比较丰富的生态，已经高度的可定制性，做出这些只是时间上的问题。
