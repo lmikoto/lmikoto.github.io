@@ -11,8 +11,11 @@ class Dialog extends Component {
 
   onSave = (e) => {
     if(e.keyCode === 13){
-      this.props.addNewTask({name: this.state.value});
-      this.setState({ value: ''})
+      const { value = '' } = this.state;
+      if(value.length !== 0){
+        this.props.addNewTask({name: value});
+        this.setState({ value: ''})
+      }
     }
   }
 
