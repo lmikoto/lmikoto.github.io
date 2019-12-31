@@ -1,7 +1,7 @@
 ---
-date: 2019-12-30T15:50:01.996Z
 title: Gatsby + Netlify CMS + GitHub快速搭建静态博客
 description: Gatsby + Netlify CMS + GitHub快速搭建静态博客
+date: 2019-12-30T15:50:01.996Z
 ---
 ## 为什么选 Gatsby
 
@@ -19,7 +19,7 @@ description: Gatsby + Netlify CMS + GitHub快速搭建静态博客
 #### 安装gatsby
 
 ```bash
-yarn global gatsby
+yarn global add gatsby
 ```
 
 #### 构建项目
