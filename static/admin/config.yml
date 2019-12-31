@@ -9,6 +9,7 @@ collections:
   - name: blog
     label: Blog
     folder: content/blog
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true
     fields:
       - { name: title, label: Title }
