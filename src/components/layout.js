@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 import { rhythm, scale } from "../utils/typography"
+import GitTalk from '../components/gitalk';
 
 class Layout extends React.Component {
   render() {
@@ -65,6 +66,7 @@ class Layout extends React.Component {
         >
           <header>{header}</header>
           <main>{children}</main>
+          <GitTalk />
         </div>
         <Footer>
           © {new Date().getFullYear()}, Built with
