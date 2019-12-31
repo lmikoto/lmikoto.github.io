@@ -1,3 +1,4 @@
+const path = require('path')
 module.exports = {
   siteMetadata: {
     // edit below
@@ -85,6 +86,14 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
+    },
+    {
+      resolve: 'gatsby-plugin-alias-imports',
+      options: {
+        alias: {
+          '@': path.resolve(__dirname, 'src'),
+        }
+      }
     },
   ],
 }

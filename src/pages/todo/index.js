@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ListItem from '../../components/todo/listItem';
-import Dialog from '../../components/todo/dialog';
-import { save, get } from '../../utils/localStorage';
+import ListItem from '@/components/todo/listItem';
+import Dialog from '@/components/todo/dialog';
+import { save, get } from '@/utils/localStorage';
 import './index.css';
 
 const defaultStatus = {
