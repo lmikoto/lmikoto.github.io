@@ -6,8 +6,6 @@ class GitTalk extends Component {
 
   componentDidMount(){
     const temp = window.location.pathname.split("/");
-    console.log("document.title")
-    console.log(temp[temp.length-2].slice(0,50))
     const gitalk = new Gitalk({
       clientID: 'aee6db5f6657d8a329a0',
       clientSecret: 'dc656da5cb2af77e7dc26c332c9212e71ce70c09',

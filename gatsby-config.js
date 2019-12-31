@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     // edit below
     title: `Lmikoto Blog`,
-    author: `Kyle Matthews`,
+    author: `lmikoto`,
     description: `A starter personal blog with styled components, dark mode, and Netlify CMS.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
@@ -18,6 +18,14 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed-mdx`,
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true, 
+        jsxPragma: `jsx`,
+        allExtensions: true
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
