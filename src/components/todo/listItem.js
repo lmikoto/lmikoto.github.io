@@ -28,9 +28,9 @@ class ListItem extends Component {
 			backgroundColor: '#FFFA9D',
 			color: '#FF9A3C',
 			textDecoration: 'line-through'
-		}
+    }
 
-		var itemStyle = item.status === 0 ? unfinish : finish;
+		const itemStyle = item.status === 0 ? unfinish : finish;
 		
 		return (
 			<li key={item.id} style={itemStyle}>

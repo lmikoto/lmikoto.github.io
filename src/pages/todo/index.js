@@ -1,31 +1,33 @@
 import React, { Component } from 'react';
-import ListItem from './listItem';
-import Dialog from './dialog';
-import { save, get, update } from '../../utils/localStorage';
+import ListItem from '../../components/todo/listItem';
+import Dialog from '../../components/todo/dialog';
+import { save, get } from '../../utils/localStorage';
 import './index.css';
 
+const defaultStatus = {
+  list: [
+    {
+      id: 1,
+      name: '吃饭',
+      status: 0
+    },
+    {
+      id: 2,
+      name: '睡觉',
+      status: 0
+    },
+    {
+      id: 3,
+      name: '写bug',
+      status: 0
+    }
+  ],
+  finished: 0,
+  idCounter: 3
+}
+
 class TodoList extends Component {
-  state = get("mokotoTodo",{
-    list: [
-      {
-        id: 1,
-        name: '吃饭',
-        status: 0
-      },
-      {
-        id: 2,
-        name: '睡觉',
-        status: 0
-      },
-      {
-        id: 3,
-        name: '写bug',
-        status: 0
-      }
-    ],
-    finished: 0,
-    idCounter: 3
-  });
+  state = defaultStatus;
 
 	addNewTask =  ({name}) => {
     const { list,idCounter } = this.state;
@@ -71,12 +73,18 @@ class TodoList extends Component {
     save("mokotoTodo",this.state)
   }
 
+  componentDidMount(){
+   const state = get("mokotoTodo",defaultStatus);
+   this.setState(state)
+  }
+
 	render () {
+    const { list } = this.state;
 		return (
 			<div className="container">
 				<h1>TodoList</h1>
 				<ul>
-					{ this.state.list.map ((item, index) =>
+					{ list.map ((item, index) =>
 						<ListItem 
 							item={item}  
 							handleFinish={this.handleFinish} 
