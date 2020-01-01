@@ -12,9 +12,9 @@ class GitTalk extends Component {
       repo: 'blog',
       owner: 'lmikoto',
       admin: ['lmikoto'],
-      id: 'test',
+      id: temp[temp.length - 2].slice(0,50),
       distractionFreeMode: false,
-      title: document.title.slice(0,50)
+      title: temp[temp.length - 2].slice(0,50)
     })
     gitalk.render('gitalk-container')
   }
