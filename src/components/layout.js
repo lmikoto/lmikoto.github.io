@@ -4,6 +4,8 @@ import styled from "styled-components"
 
 import { rhythm, scale } from "../utils/typography"
 
+import ScrollUpButton from '@/components/goto-top'
+
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
@@ -66,6 +68,7 @@ class Layout extends React.Component {
           <header>{header}</header>
           <main>{children}</main>
         </div>
+        <ScrollUpButton />
         <Footer>
           © {new Date().getFullYear()}, Built with
           {` `}
