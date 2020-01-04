@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ListItem from '@/components/todo/listItem';
 import Dialog from '@/components/todo/dialog';
 import { save, get } from '@/utils/localStorage';
-import './index.css';
+import style from './index.module.scss';
 
 const defaultStatus = {
   list: [
@@ -81,7 +81,7 @@ class TodoList extends Component {
 	render () {
     const { list } = this.state;
 		return (
-			<div className="container">
+			<div className={style.container}>
 				<h1>TodoList</h1>
 				<ul>
 					{ list.map ((item, index) =>
