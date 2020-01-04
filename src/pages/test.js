@@ -1,8 +1,11 @@
 import React from 'react';
-import Search from '@/components/search'
+
+import style from './test.scss';
 
 export default () => {
   return (
-    <Search />
+    <div className={style.test}>
+      333333
+    </div>
   )
 }
