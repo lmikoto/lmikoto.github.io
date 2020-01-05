@@ -1,8 +1,15 @@
 import React from 'react';
 
+import style from './index.module.scss';
+import Search from '../search';
+
 export default () => {
   
   return (
-    <div></div>
+    <header className={style.header}>
+      <div className={style.search}>
+        <Search />
+      </div>
+    </header>
   )
 }

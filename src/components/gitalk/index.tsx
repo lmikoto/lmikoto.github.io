@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
+import * as React from 'react';
 import 'gitalk/dist/gitalk.css'
 import Gitalk from 'gitalk'
 
@@ -20,7 +21,7 @@ class GitTalk extends Component {
   }
 
   render(){
-    return <div id="gitalk-container"></div>
+    return <div id="gitalk-container" />
   }
 }
 
